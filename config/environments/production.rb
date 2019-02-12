@@ -93,5 +93,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #Config du mailer avec ma super app :
-  config.action_mailer.default_url_options = { :host => 'StrasEVENT.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'strassbrightevent.herokuapp.com' }
 end

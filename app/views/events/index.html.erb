@@ -1,0 +1,28 @@
+<h1>Events#index</h1>
+
+<main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Salut à toi !</h1>
+          <p>Comme tu le sais, Strasbourg est une ville très active. Découvre ici une liste des événements à venir dans cette magnifique ville. Tu es plutôt intéressé par la création d'un événement ? Pas un souci, créés-en un ! </p>
+          <p><a class="btn btn-primary btn-lg" href=" <%= new_event_path %>" role="button">Créer un event »</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <% Event.all.each do |event|  %>
+          <div class="col-md-4">
+            <h2> <%= event.title %></h2>
+            <p> <%= event.description %> </p>
+            <p><a class="btn btn-secondary" href="<%= event_path(event.id)%>" role="button">En savoir plus »</a></p>
+          </div>
+          <% end %>
+          <hr>
+        </div>
+      </div> <!-- /container -->
+
+</main>

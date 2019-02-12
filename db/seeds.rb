@@ -1,7 +1,7 @@
 require 'faker'
 
 10.times do
-	user = User.create!(first_name: Faker::Lebowski.character,last_name: Faker::LordOfTheRings.character,description: Faker::Lorem.sentence,email: Faker::Internet.email, encrypted_password: Faker::Internet.password)
+	user = User.create!(first_name: Faker::Lebowski.character,last_name: Faker::LordOfTheRings.character,description: Faker::Lorem.sentence,email: Faker::Internet.email, password: Faker::Internet.password)
 end
 
 20.times do
