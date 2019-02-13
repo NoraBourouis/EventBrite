@@ -1,6 +1,7 @@
 class ParticipationsController < ApplicationController
   def index
-    @attendances = Attendance.all
+    @attendance = Attendance.where(event_id: params[:event_id])
+    @event = Event.find(params[:event_id])
   end
 
   def new

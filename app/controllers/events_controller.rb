@@ -33,6 +33,31 @@ class EventsController < ApplicationController
     @attendance = Attendance.where(event_id: @event)
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+ 
+  def update
+    @event = Event.find(params[:id])
+ 
+    if @event.update('start_date' => params[:start_date],
+                    'duration' => params[:duration],
+                    'description' => params[:description],
+                    'location' => params[:location],
+                    'price' => params[:price],
+                    'title' => params[:title])
+      redirect_to @event, success: " Event successfully modified! "
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to events_path, notice: " Votre événement a été supprimé :( ! "
+  end
+
   private
 
   def end_date

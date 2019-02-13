@@ -8,14 +8,15 @@ class Event < ApplicationRecord
   validates :title, presence: true, length: { in: 5..140 }
   validates :description, presence: true, length: { in: 4..1000 }
   validates :price, presence: true, length: { in: 1..1000 }
-  validates :duration, presence: true, numericality: { greater_than: 0 }, if: :multiple_five
+  validates :duration, presence: true, numericality: { greater_than: 0 }
+  validate :multiple_five
   validates :location, presence: true
  
   
   private
   
   def multiple_five
-    if duration % 5 == 0
+    if duration.to_i % 5 == 0
       return true
     else
       return false

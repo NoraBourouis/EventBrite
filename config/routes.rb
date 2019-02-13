@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :home, only: [:index, :secret]
-  resources :events, only: [:index, :new, :show, :create, :edit] do
+  resources :events do
     resources :participations, only: [:new, :index, :create]
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
   post "/events/:event_id/participations/:id", to: "participations#create", as: "event_participation"
+  delete "/events/:id/", to: "events#destroy", as: "destroy_event"
   root 'events#index'
 end
