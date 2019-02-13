@@ -1,18 +1,12 @@
-<div class="container bootstrap snippet">
-    <div class="row">
-  		<div class="col-sm-10"><h1 class= >Modifier mon profil</h1></div>
-    </div>
-    <hr>
-    <div class="row">
-  		<div class="col-sm-3"><!--left col-->
-      <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-      </div> 
-      <br>
-    </div><!--/col-3-->
+ <div class="jumbotron text-center">
+ <div class="container">
+    <h1 class= "display-3 jumbotron-heading">Modifier mon profil</h1>
+  </div>
+</div>
  <div class="container-fluid">
    <%= form_tag url_for(action: 'update'), method: "patch" do %>
    <div class="row"> 
+   <div class="col-md-4"></div>
     <div class="col-md-2">
       <label> Prénom </label>
     </div>
@@ -21,6 +15,7 @@
     </div>
   </div>
   <div class="row">
+  <div class="col-md-4"></div>
     <div class="col-md-2">
       <label> Nom </label>
     </div>
@@ -29,6 +24,7 @@
     </div>
   </div>   
  <div class="row">
+ <div class="col-md-4"></div>
     <div class="col-md-2">
       <label> Email</label>
     </div>
@@ -37,6 +33,7 @@
     </div>
   </div>  
  <div class="row">
+ <div class="col-md-4"></div>
     <div class="col-md-2">
       <label> Description </label>
     </div>
@@ -45,8 +42,12 @@
     </div>
   </div>                                                                                                                
   </div>
-   <%= submit_tag "Valider mes modifications de profil" %>
+  <div class="container-fluid">
+  <div class= "col-sm-4"></div>
+  <button type="submit" class="btn btn-primary text-center">Valider mes modifications de profil</button> 
+  </div>
+<% end %>
 </div>
 <hr/>
-<% end %>
+
 
