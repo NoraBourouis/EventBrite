@@ -1,11 +1,11 @@
 # README
 
-#Auteurs
+# Auteurs
 Nora Bourouis et Marylis Stenger
 
-##Lien Heroku: https://strassbrightevent.herokuapp.com/
+## Lien Heroku: https://strassbrightevent.herokuapp.com/
 
-#Pré-requis 
+# Pré-requis 
 télécharger le zip 
 
 dézipper 

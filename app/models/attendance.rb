@@ -4,7 +4,7 @@ class Attendance < ApplicationRecord
   
   belongs_to :event 
   belongs_to :user
-  validates :stripe_customer_id, uniqueness: true 
+#validates :stripe_customer_id, uniqueness: true 
   validates :user_id, presence: true
 
   def join_send

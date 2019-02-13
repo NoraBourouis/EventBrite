@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :home, only: [:index, :secret]
-  resources :events, only: [:index, :new, :show, :create]
+  resources :events, only: [:index, :new, :show, :create, :edit] do
+    resources :participations, only: [:new, :index, :create]
+  end
   resources :users, only: [:show]
+  post "/events/:event_id/participations/:id", to: "participations#create", as: "event_participation"
   root 'events#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

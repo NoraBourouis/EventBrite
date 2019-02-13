@@ -30,8 +30,7 @@ class EventsController < ApplicationController
   def show
     @event= Event.find(params[:id])
     @admin = @event.admin_id
-    
-    @attendance = Attendance.where(event_id: @user)
+    @attendance = Attendance.where(event_id: @event)
   end
 
   private
@@ -39,5 +38,6 @@ class EventsController < ApplicationController
   def end_date
   end_date = start_date + duration.to_i 
   return @end_date
-end
+  end
+
 end
