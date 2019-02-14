@@ -20,6 +20,14 @@
         <%end%>
   </tbody>
   </table>
-  <a class="btn btn-secondary btn-lg" href="<%= edit_event_path(@event)%>">Edition de mon événement</a>
-  <%= button_to "Suppression de mon événement", @event, data: {:confirm => 't es sûr de toi la??'} , :method => :delete, class: "btn btn-secondary btn-lg"%>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col md-4">
+        <a class="btn btn-secondary btn-lg" href="<%= edit_event_path(@event)%>">Edition de mon événement</a>
+      </div>
+      <div class="col md-4">
+        <%= button_to "Suppression de mon événement", @event, data: {:confirm => 't es sûr de toi la??'} , :method => :delete, class: "btn btn-secondary btn-lg"%>
+      </div>
+  <div>
+</div>
 </div> <!-- /container -->

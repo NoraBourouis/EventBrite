@@ -35,6 +35,8 @@ class ParticipationsController < ApplicationController
         flash[:success] = "Vous êtes bien inscrit à l'événement."
         redirect_to event_path(@event.id) 
         puts "participation +1"
+    else 
+      puts 'soucis au niveau des participations/inscriptions'
     end
       
     rescue Stripe::CardError => e
