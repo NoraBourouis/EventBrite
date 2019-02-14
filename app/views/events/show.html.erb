@@ -1,5 +1,9 @@
+<div class="jumbotron text-center">
+ <div class="container">
+    <h3 class= "display-3 jumbotron-heading">Détails sur l'évent</h3>
+  </div>
+</div>
 <section id="post-your-event-tabs">
-  <h1 class="section-title text-center">Details de l'événement</h1>
   <div class="container">
         <!-- Example row of columns -->
   <br>
@@ -24,9 +28,7 @@
   </tbody>
   </table>
    <hr/>
-  <br/>
-     <h2 class="text-center"> A propos de l'event</h2>
-  <br/>
+   <br/>
   <div class="container text-center">
           <div class="row">
             <div class="col-md-4 ">
@@ -36,7 +38,9 @@
             </div> 
               <div class ="col-md-4">
                <h4> Nombre de participants : <%= @attendance.count%> </h4>
-                    <% if current_user != User.find(@admin) %>
+                    <% if current_user == User.find(@admin) %>
+                     <% elsif @attendee.include? current_user %>
+                     <%else%>
                       <a class="btn btn-primary btn-md" href=" <%= new_event_participation_path(@event.id) %>" role="button">Rejoindre l'événement »</a>
                    <% end %>
               </div>

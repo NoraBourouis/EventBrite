@@ -30,6 +30,7 @@ class EventsController < ApplicationController
   def show
     @event= Event.find(params[:id])
     @admin = @event.admin_id
+    @attendee = @event.users
     @attendance = Attendance.where(event_id: @event)
   end
 
