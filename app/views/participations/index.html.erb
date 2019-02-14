@@ -1,7 +1,7 @@
+  <h2 class="text-center">Liste des participants à l'évenement </h2>
  <div class="container">
         <!-- Example row of columns -->
-   <h2>Voilà les participants à ton event:</h2>
-  <br>
+  <br/>
         <table class="table">
         <thead>
           <tr>
@@ -20,14 +20,18 @@
         <%end%>
   </tbody>
   </table>
+  <hr/>
+  <br/>
 <div class="container-fluid">
   <div class="row">
-      <div class="col md-4">
+     <div class="col-md-2"></div>
+      <div class="col-md-4">
         <a class="btn btn-secondary btn-lg" href="<%= edit_event_path(@event)%>">Edition de mon événement</a>
       </div>
-      <div class="col md-4">
-        <%= button_to "Suppression de mon événement", @event, data: {:confirm => 't es sûr de toi la??'} , :method => :delete, class: "btn btn-secondary btn-lg"%>
+      <div class="col-md-4">
+        <%= button_to "Suppression de mon événement", @event, data: {:confirm => 'êtes-vous sûr de vouloir supprimer cet événement?'} , :method => :delete, class: "btn btn-danger btn-lg"%>
       </div>
+      <div class="col-md-2"></div>
   <div>
 </div>
 </div> <!-- /container -->

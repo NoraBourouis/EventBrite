@@ -44,7 +44,7 @@
       </div>                                                                                                                
       </div>
       <br/>
-      <a class="btn btn-secondary btn-md" href="<%= edit_user_path(@user.id)%>">Modifier mon profil</a>
+      <button class="btn btn-secondary btn-md" href="<%= edit_user_path(@user.id)%>">Modifier mon profil</button>
 </div>
 <hr/>
 <h3 class="text-center"> Liste des évenéments créés </h3>
@@ -55,7 +55,7 @@
     <div class= "col-md-6">
       <p>Titre de l'évent : <%= event.title %> </p>
       <p><a class="btn btn-primary btn-sm" href=" <%= event_path(event.id) %>" role="button"> En savoir plus >> </a> </p>
-    <%end%>
     </div>
+    <%end%>
   </div>
 </div>
