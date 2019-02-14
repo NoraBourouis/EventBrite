@@ -1,60 +1,59 @@
 <div class="container bootstrap snippet">
-    <div class="row">
-  		<div class="col-sm-10"><h1 class= >Mon profil</h1></div>
-    </div>
-    <hr>
-    <div class="row">
-  		<div class="col-sm-3"><!--left col-->
-      <div class="text-center">
+    <h1 class="text-center" >Mon profil</h1>
+    <hr/>
+    <div class="container-fluid text-center">
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-      </div> 
-      <br>
-    </div><!--/col-3-->
- <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-      <label> Prénom </label>
-    </div>
-    <div class= "col-md-6">
-      <p><%= @user.first_name %><p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2">
-      <label> Nom </label>
-    </div>
-    <div class= "col-md-6">
-      <p><%= @user.last_name %><p>
-    </div>
-  </div>   
- <div class="row">
-    <div class="col-md-2">
-      <label> Email</label>
-    </div>
-    <div class= "col-md-6">
-      <p><%= @user.email %><p>
-    </div>
-  </div>  
- <div class="row">
-    <div class="col-md-2">
-      <label> Description </label>
-    </div>
-    <div class= "col-md-6">
-      <p><%= @user.description %><p>
-    </div>
-  </div>                                                                                                                
-  </div>
-  <a class="btn btn-secondary btn-lg" href="<%= edit_user_path(@user.id)%>">Modifier mon profil</a>
+      <br/>
+      <br/>
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-4"></div>
+        <div class="col-md-2 text-right">
+          <label> Prénom :</label>
+        </div>
+        <div class= "col-md-6 text-left">
+          <p><%= @user.first_name %><p>
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-md-4"></div>
+        <div class="col-md-2 text-right">
+          <label> Nom : </label>
+        </div>
+        <div class= "col-md-6 text-left">
+          <p><%= @user.last_name %><p>
+        </div>
+      </div>   
+    <div class="row">
+    <div class="col-md-4"></div>
+        <div class="col-md-2 text-right">
+          <label> Email : </label>
+        </div>
+        <div class= "col-md-6 text-left">
+          <p><%= @user.email %><p>
+        </div>
+      </div>  
+    <div class="row">
+    <div class="col-md-4"></div>
+        <div class="col-md-2 text-right">
+          <label> Description : </label>
+        </div>
+        <div class= "col-md-6 text-left">
+          <p><%= @user.description %><p>
+        </div>
+      </div>                                                                                                                
+      </div>
+      <br/>
+      <a class="btn btn-secondary btn-md" href="<%= edit_user_path(@user.id)%>">Modifier mon profil</a>
 </div>
 <hr/>
+<h3 class="text-center"> Liste des évenéments créés </h3>
+<br/>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-10">
-      <h3> Liste des évenéments créés </h3>
-    </div>
     <% @event.each do |event|%>
     <div class= "col-md-6">
-      <p>Titre de l'event : <%= event.title %> </p>
+      <p>Titre de l'évent : <%= event.title %> </p>
       <p><a class="btn btn-primary btn-sm" href=" <%= event_path(event.id) %>" role="button"> En savoir plus >> </a> </p>
     <%end%>
     </div>
