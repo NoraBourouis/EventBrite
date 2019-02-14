@@ -22,7 +22,7 @@ class ParticipationsController < ApplicationController
   
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => @amount,
+      :amount      => @amount *100,
       :description => 'Paiement',
       :currency    => 'eur'
     )

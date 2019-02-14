@@ -35,5 +35,21 @@ RSpec.describe Event, type: :model do
         end
       end
 =end
+
+describe "#price" do
+  it "should not be valid without price < 1" do
+    @valid_event.price = 0
+    expect(@valid_event).not_to be_valid
+  end
+end
+
+describe "#price" do
+  it "should not be valid without a price > 1000" do
+    @valid_event.price = 1001       
+    expect(@valid_event).not_to be_valid
+  end
+end
+
+
 end
   

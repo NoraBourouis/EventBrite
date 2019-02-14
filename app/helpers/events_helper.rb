@@ -1,15 +1,16 @@
 module EventsHelper
  def participate
+  @boolean = false
   if current_user != User.find(@admin)
     puts "current user pas admin"
-    Attendance.all.each do |attendance| 
-      if attendance.user_id == current_user.id && attendance.event_id == @event.id
-        return false
-        break
-      else 
-        return true
+   Attendance.all.each do |att|
+    if att.user_id == current_user.id
+      if att.event_id == @event.id
+        @boolean = true
       end
+      end
+     end
     end
-   end
-  end
+  end    
 end
+
