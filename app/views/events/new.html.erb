@@ -34,6 +34,7 @@
     <label for="inputAddress2">Description</label>
     <%= text_area_tag 'description', @event.description, class: 'form-control' %>
   </div>
+   <%= file_field_tag :event_picture %>
   <button type="submit" class="btn btn-primary align-center">Créer un événement</button>
   <% end %>
   </div>
