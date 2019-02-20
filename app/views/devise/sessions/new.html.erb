@@ -1,13 +1,8 @@
-<h2>Log in</h2>
 <body id="LoginForm">
   <div class="container">
     <h1 class="form-heading">Espace de connexion</h1>
     <div class="login-form">
       <div class="main-div">
-          <div class="panel">
-            <h2> Connection </h2>
-            <p>Entrez votre email et mot de passe </p>
-         </div>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name), id: "Login") do |f| %>
            <div class="form-group">
                 <%= f.label :email %><br />
