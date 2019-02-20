@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-text">
+      <a class="navbar-brand" href="<%= events_path %>">Strasbourg Events</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active nav-link">
+            <a class="nav-link" href="<%= events_path %>">Accueil</a>
+          <li class="nav-item nav-link">
+            <a class="nav-link" href="<%= new_event_path %>">Créer un event</a>
+          </li>
+        </ul>
+    </div>
+
+  <% if current_user %>
+    <div class="dropdown">
+      <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Espace perso
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a href="<%= user_path(current_user.id) %>" class="dropdown-item">Mon profil</a>
+        <%= link_to "Se déconnecter", destroy_user_session_path(current_user.id) , method: :delete, class: "dropdown-item" %>
+      </div>
+    </div>
+  <% else %>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Connexion
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="<%= new_user_session_path %>">Se connecter</a>
+        <a class="dropdown-item" href="<%= new_user_registration_path %>">S'inscrire</a>
+      </div>
+     </div>
+  <%end%>
+  </nav>

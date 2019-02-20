@@ -1,27 +1,7 @@
 <main role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h2 class="display-3">StrassBright Events</h2>
-          <p>Comme vous le savez bien, Strasbourg est une ville très active. Découvrez ici une liste des événements à venir dans cette magnifique ville. Vous êtes souhaitez organiser un événement ? Cette plateforme est faite pour cela! </p>
-          <p><a class="btn btn-primary btn-lg" href=" <%= new_event_path %>" role="button">Organiser un événement</a></p>
-        </div>
-      </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <% Event.all.each do |event|  %>
-          <div class="col-md-4">
-            <h2><%= event.title %></h2>
-            <p> <%= event.description %></p>
-            <p><a class="btn btn-secondary btn-sm" href="<%= event_path(event.id)%>" role="button">En savoir plus »</a></p>
-          </div>
-          <br/>
-          <% end %>
-          <hr>
-        </div>
-      </div> <!-- /container -->
+    <%= render 'events/banner'%>
+    <%= render 'events/cardsevent'%>
 
 </main>
