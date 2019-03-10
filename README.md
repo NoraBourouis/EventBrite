@@ -1,7 +1,6 @@
 # README
 
-# Auteurs
-Nora Bourouis et Marylis Stenger
+# Auteur : Nora Bourouis
 
 ## Lien Heroku: https://strassbrightevent.herokuapp.com/
 
