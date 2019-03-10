@@ -20,7 +20,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a href="<%= user_path(current_user.id) %>" class="dropdown-item">Mon profil</a>
-        <%= link_to "Se déconnecter", destroy_user_session_path(current_user.id) , method: :delete, class: "dropdown-item" %>
+        <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "dropdown-item" %>
       </div>
     </div>
   <% else %>
