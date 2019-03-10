@@ -1,8 +1,5 @@
 # README
 
-# Auteurs
-Nora Bourouis et Marylis Stenger
-
 ## Lien Heroku: https://strassbrightevent.herokuapp.com/
 
 # Pré-requis 
@@ -29,6 +26,4 @@ Créer manuellement un user avec un mail qui se termine en @yopmail.com
 vérifier sur http://www.yopmail.com/
 
 
-#Consignes
-
-Lundi : avant de faire les champions des views, tu vas créer la base de données. Ensuite tu vas brancher un mailer pour avoir un système d'emails fonctionnel en production
+Crédits: ce repo a été forked du repo de Nora Bourouis (https://github.com/NoraBourouis/EventBrite_Like/)
