@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light nav-text">
+<nav class="navbar navbar-expand-lg navbar-light nav-text">
       <a class="navbar-brand" href="<%= events_path %>">Strasbourg Events</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a href="<%= user_path(current_user.id) %>" class="dropdown-item">Mon profil</a>
-        <%= link_to "Se déconnecter", destroy_user_session_path(current_user.id) , method: :delete, class: "dropdown-item" %>
+        <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       </div>
     </div>
   <% else %>
